@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Auckland_NIWA_2023_2024 Imagery Centres",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Project": "PGRM3155", "Company_Name": "NIWA", "SN_No": "SN14310", "Description": "Auckland Post-cyclone - 2023 Flying 18049 ft & Orthos", "OrthoGSD_m": 0.25, "PointDensity_(points/m2)": null, "Area": 1602.9591040930561, "Percentage_Coverage": null }, "geometry": { "type": "Point", "coordinates": [ 174.53197958416564, -36.821208893433806 ] } }
+]
+}

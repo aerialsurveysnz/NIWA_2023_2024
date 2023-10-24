@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "HawkesBay_NIWA_2023_2024 Imagery Centres",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "Project": "PGRM3156", "Company_Name": "NIWA", "SN_No": "SN14313", "Description": "Hawkes Bay Post-cyclone - 2023 Flying 18049 ft & Orthos", "OrthoGSD_m": 0.25, "PointDensity_(points/m2)": null, "Area": 15517.990648564513, "Percentage_Coverage": null }, "geometry": { "type": "Point", "coordinates": [ 176.752122453823517, -39.380557083199157 ] } }
+]
+}
