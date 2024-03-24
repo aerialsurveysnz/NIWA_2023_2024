@@ -43,8 +43,8 @@
       });
 
       map.addSource('CoverageSource', {
-        type: 'geojson'//,
-        //data: 'Data/Auckland_NIWA_2023_2024 - Captured_Area.geojson'
+        type: 'geojson',
+        data: 'Data/Auckland_NIWA_2023_2024 - Captured_Area.geojson'
       });
 
       map.addLayer({
@@ -96,13 +96,13 @@
                               "<b>Imagery GSD: </b>" + featurePCentre.properties.OrthoGSD_m + "</br>" +
                               //"<b>Point Density: </b>" + featurePCentre.properties.Point_Dens + "</br>" +
                               "<b>Area: </b>" + (featurePCentre.properties.Area).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })+ " km²</br>" +
-                              "<b>Captured Area: </b>" + (0).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + " km²</br>" +
-                              "<b>Coverage To Date: " + (0/featurePCentre.properties.Area).toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 }) + "%</b></br>";
+                              "<b>Captured Area: </b>" + featureCoverage.properties.Area.toLocaleString(undefined, { minimumFractionDigits: 0, maximumFractionDigits: 0 })  + " km²</br>" +
+                              "<b>Coverage To Date: </b>" + featureCoverage.properties.Percentage_Coverage + "%</br>";
 
           var popupContent = document.createElement('div');
           popupContent.innerHTML = description;
 
-          var popup = new mapboxgl.Popup({ closeOnClick: false })
+          var popup = new mapboxgl.Popup({ closeOnClick: true })
             .setLngLat(coordinates)
             .setDOMContent(popupContent)
             .addTo(map);
@@ -196,7 +196,7 @@
           var popupContent = document.createElement('div');
           popupContent.innerHTML = description;
 
-          var popup = new mapboxgl.Popup({  closeOnClick: false })
+          var popup = new mapboxgl.Popup({  closeOnClick: true })
             .setLngLat(coordinates)
             .setDOMContent(popupContent)
             .addTo(map);
@@ -290,7 +290,7 @@
           var popupContent = document.createElement('div');
           popupContent.innerHTML = description;
 
-          var popup = new mapboxgl.Popup({  closeOnClick: false })
+          var popup = new mapboxgl.Popup({  closeOnClick: true })
             .setLngLat(coordinates)
             .setDOMContent(popupContent)
             .addTo(map);
